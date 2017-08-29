@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import CourseItem from "../components/course-list/course-item";
+import SearchBar from "../components/course-list/search-bar";
 import CourseListHeader from "../components/course-list/header";
 
 class CourseList extends Component {
@@ -47,6 +48,7 @@ class CourseList extends Component {
   render() {
     return (
       <main className="course-list">
+        <SearchBar />
         <CourseListHeader />
         {this.addListItems()}
       </main>
