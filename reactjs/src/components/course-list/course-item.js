@@ -24,7 +24,9 @@ class CourseItem extends Component {
           {name}
         </div>
         <div className="course-page">
-          <a href={coursePage}>Visit page</a>
+          <a href={coursePage} target="_blank" rel="noopener noreferrer">
+            Visit page
+          </a>
         </div>
         <div className="periods">
           {appendListItems(periods)}
