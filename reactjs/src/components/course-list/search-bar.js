@@ -4,7 +4,11 @@ import "../../App.css";
 class SearchBar extends Component {
   render() {
     return (
-      <input className="search-bar" type="text" placeholder="Code, name..." />
+      <input
+        className="search-bar"
+        type="text"
+        placeholder="Search by code, name..."
+      />
     );
   }
 }
