@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
-import Header from '../components/layout/header';
-import '../App.css';
+import React, { Component } from "react";
+import Header from "../components/layout/header";
+import CourseList from "./course-list";
+import "../App.css";
 
 class Layout extends Component {
   render() {
     return (
-      <Header />
+      <div className="layout">
+        <Header />
+        <CourseList />
+      </div>
     );
   }
 }

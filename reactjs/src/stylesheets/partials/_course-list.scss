@@ -1,0 +1,50 @@
+.course-list {
+  margin-top: 50px;
+  width: 80%;
+  .course-item,
+  .course-list-header {
+    display: flex;
+    width: 100%;
+    div {
+      display: flex;
+      align-items: center;
+      padding: 2px;
+    }
+    .code {
+      flex: 1;
+    }
+    .name {
+      flex: 4;
+    }
+    .course-page {
+      flex: 1;
+    }
+    .periods {
+      flex: 1;
+    }
+    .blocks {
+      flex: 1;
+    }
+    .type {
+      flex: 1;
+    }
+    .code,
+    .course-page,
+    .periods,
+    .blocks,
+    .type {
+      justify-content: center;
+    }
+  }
+  .course-list-header {
+    font-weight: 800;
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    border-radius: 2px;
+    background-color: #fafafa;
+    padding: 0.5em 0;
+  }
+  .course-item {
+    height: 50px;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+  }
+}
