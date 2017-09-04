@@ -6,7 +6,7 @@ class SearchBar extends Component {
     return (
       <input
         className="search-bar"
-        type="text"
+        type="search"
         placeholder="Search by code, name..."
       />
     );
