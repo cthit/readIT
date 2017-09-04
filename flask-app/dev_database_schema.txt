@@ -1,0 +1,9 @@
+CREATE TABLE courses (
+  code VARCHAR(6) UNIQUE PRIMARY KEY,
+  name VARCHAR(30),
+  course_page VARCHAR(50),
+  type VARCHAR(10)
+);
+
+INSERT INTO courses (code, name, course_page, type) VALUES ('DAT255', 'Software engineering project', '', 'YEAR 2');
+INSERT INTO courses (code, name, course_page, type) VALUES ('MVE045', 'Matematisk analys', '', 'YEAR 2');
