@@ -9,7 +9,7 @@ function appendListItems(list) {
   for (var i = 0; i < list.length; i++) {
     text += list[i];
     if (i !== list.length - 1) {
-      text += ", ";
+      text += ",";
     }
   }
   return text;
