@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "../../App.css";
 
 function appendListItems(list) {
+  if (!list) {
+    return "empty*";
+  }
   let text = "";
   for (var i = 0; i < list.length; i++) {
     text += list[i];
