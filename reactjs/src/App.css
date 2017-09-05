@@ -56,7 +56,8 @@
         color: #09cdda; }
         .course-list .course-item .course-page a:hover,
         .course-list .course-list-header .course-page a:hover {
-          color: blue; }
+          color: blue;
+          cursor: pointer; }
     .course-list .course-item .periods,
     .course-list .course-list-header .periods {
       flex: 1; }
