@@ -5,30 +5,26 @@ import request from "superagent";
 import "../App.css";
 
 class Layout extends Component {
-  constructor() {
-    super();
-    this.state = {
-      courseList: []
-    };
+  state = {
+    courseList: []
+  };
+
+  componentWillMount() {
+    this.requestData();
   }
 
-  request() {
+  requestData = () => {
     request
       .get(process.env.REACT_APP_API_HOST + "/courses")
       .accept("json")
       .end((err, res) => {
         if (res) {
-          res = JSON.parse(res.text);
           this.setState({
-            courseList: res.courses
+            courseList: JSON.parse(res.text).courses
           });
         }
       });
-  }
-
-  componentWillMount() {
-    this.request();
-  }
+  };
 
   render() {
     const { courseList: COURSELIST } = this.state;

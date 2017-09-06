@@ -1,23 +1,34 @@
 import React, { Component } from "react";
 import "../App.css";
-import CourseItem from "../components/course-list/course-item";
+import CourseItems from "../components/course-list/course-items";
 import SearchBar from "../components/course-list/search-bar";
 import CourseListHeader from "../components/course-list/header";
 
 class CourseList extends Component {
-  addListItems() {
-    const list = this.props.courseList;
-    if (list) {
-      return list.map(item => <CourseItem key={item.code} info={item} />);
-    }
-  }
+  state = {
+    query: ""
+  };
+
+  setQuery = query => {
+    this.setState({ query });
+  };
 
   render() {
+    const { courseList } = this.props;
+    const { query } = this.state;
+
+    const filteredSearchList = courseList.filter(c => {
+      return (
+        c.code.toLowerCase().includes(query.toLowerCase()) +
+        c.name.toLowerCase().includes(query.toLowerCase())
+      );
+    });
+
     return (
       <main className="course-list">
-        <SearchBar />
+        <SearchBar setQuery={this.setQuery} value={query} />
         <CourseListHeader />
-        {this.addListItems()}
+        <CourseItems courseList={filteredSearchList} />
       </main>
     );
   }

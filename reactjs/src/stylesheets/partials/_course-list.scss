@@ -66,8 +66,11 @@
     background-color: #fafafa;
     padding: 0.5em 0;
   }
-  .course-item {
-    height: 50px;
-    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+  .course-items {
+    width: 100%;
+    .course-item {
+      height: 50px;
+      border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    }
   }
 }

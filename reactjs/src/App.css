@@ -84,9 +84,11 @@
     border-radius: 2px;
     background-color: #fafafa;
     padding: 0.5em 0; }
-  .course-list .course-item {
-    height: 50px;
-    border-bottom: 1px solid rgba(200, 200, 200, 0.5); }
+  .course-list .course-items {
+    width: 100%; }
+    .course-list .course-items .course-item {
+      height: 50px;
+      border-bottom: 1px solid rgba(200, 200, 200, 0.5); }
 
 /*
 // Third-party
