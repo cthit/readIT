@@ -20,7 +20,9 @@ class CourseList extends Component {
     const filteredSearchList = courseList.filter(c => {
       return (
         c.code.toLowerCase().includes(query.toLowerCase()) +
-        c.name.toLowerCase().includes(query.toLowerCase())
+        c.name.toLowerCase().includes(query.toLowerCase()) +
+        c.type.toLowerCase().includes(query.toLowerCase()) +
+        c.periods.includes(query.toUpperCase())
       );
     });
 
