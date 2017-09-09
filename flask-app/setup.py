@@ -18,5 +18,5 @@ setup(
 #    url='',
     license=license,
     packages=find_packages(exclude=('tests', 'docs')),
-    install_requires=['flask', 'requests', 'pyldap', 'psycopg2']
+    install_requires=['flask', 'requests', 'psycopg2']
 )
