@@ -1,6 +1,6 @@
 import psycopg2
 import json
-from .postgresql_credentials import credentials
+from database.postgresql_credentials import credentials
 
 def get_main_course_info():
     conn = psycopg2.connect(dbname=credentials['dbname'], user=credentials['user'])
