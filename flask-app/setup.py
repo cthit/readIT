@@ -18,5 +18,14 @@ setup(
 #    url='',
     license=license,
     packages=find_packages(exclude=('tests', 'docs')),
-    install_requires=['flask', 'requests', 'psycopg2']
+    # setup_requires=['pytest-runner', ...],
+    tests_require=['pytest'],
+    install_requires=[
+        'flask',
+        'requests',
+        'psycopg2',
+        'sqlalchemy',
+        'pytest',
+        'responses'
+    ]
 )
