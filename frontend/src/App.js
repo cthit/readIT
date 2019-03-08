@@ -1,0 +1,7 @@
+import React from "react";
+import Layout from "./pages/layout";
+import "./App.css";
+
+const App = () => <Layout />;
+
+export default App;
