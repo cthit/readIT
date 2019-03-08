@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CourseItems, { SearchBar, CourseListHeader } from "../../components/CourseList";
 
-const Courses = ({ courseList }) => {
+const Courses = () => {
   const [query, setQuery] = useState("");
+  const [courses, setCourses] = useState([]);
 
-  const filteredSearchList = courseList.filter(
+  useEffect(() => {
+    requestData();
+  }, []);
+
+  const requestData = () => {
+    fetch("/courses")
+      .then(response => response.json())
+      .then(courses => {
+        setCourses(courses);
+      })
+      .catch(error => console.error(error));
+  };
+
+  const filteredSearchList = courses.filter(
     ({ code, name, type, periods }) => (
         code.toLowerCase().includes(query.toLowerCase()) +
         name.toLowerCase().includes(query.toLowerCase()) +

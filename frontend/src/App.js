@@ -1,7 +1,16 @@
 import React from "react";
-import Layout from "./pages/layout";
 import "./App.css";
 
-const App = () => <Layout />;
+import AppHeader from "./components/AppHeader";
+import Courses from "./pages/Courses";
+
+const App = () => {
+  return (
+    <div className="layout">
+      <AppHeader />
+      <Courses />
+    </div>
+  );
+};
 
 export default App;

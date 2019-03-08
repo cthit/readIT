@@ -13,5 +13,6 @@ EXPOSE 3000
 # Expose Storybook
 EXPOSE 9009
 
-CMD (yarn storybook --ci --host 0.0.0.0 &) && \
+CMD npm rebuild node-sass && \
+    (yarn storybook --ci --host 0.0.0.0 &) && \
     yarn start --ci --host 0.0.0.0
