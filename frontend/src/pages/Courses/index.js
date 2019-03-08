@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CourseItems, { SearchBar, CourseListHeader } from "../../components/CourseList";
+import CourseList, { SearchBar, CourseListHeader } from "../../components/CourseList";
 
 const Courses = () => {
   const [query, setQuery] = useState("");
@@ -31,7 +31,7 @@ const Courses = () => {
     <main className="course-list">
       <SearchBar setQuery={setQuery} value={query} />
       <CourseListHeader />
-      <CourseItems courseList={filteredSearchList} />
+      <CourseList courseList={filteredSearchList} />
     </main>
   );
 };

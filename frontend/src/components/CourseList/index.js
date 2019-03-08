@@ -1,5 +1,6 @@
 import React from "react";
-import './CourseList.scss';
+import { Link } from "react-router-dom";
+import "./CourseList.scss";
 
 export const SearchBar = ({ setQuery, value }) => (
   <input
@@ -28,7 +29,9 @@ const CourseItem = ({
   return (
     <li className="course-item">
       <div className="code">{code}</div>
-      <div className="name">{name}</div>
+      <Link to={`/course/${code}/show`} className="name">
+        {name}
+      </Link>
       <div className="course-page">
         <a href={course_page} target="_blank" rel="noopener noreferrer">
           Visit page

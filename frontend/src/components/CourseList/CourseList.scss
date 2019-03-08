@@ -20,7 +20,7 @@
   .course-list-header {
     display: flex;
     width: 100%;
-    div {
+    div, a {
       display: flex;
       align-items: center;
       padding: 2px;
@@ -30,17 +30,10 @@
     }
     .name {
       flex: 4;
+      color: inherit;
     }
     .course-page {
       flex: 1;
-      a {
-        text-decoration: none;
-        color: #09cdda;
-        &:hover {
-          color: blue;
-          cursor: pointer;
-        }
-      }
     }
     .periods {
       flex: 1;
