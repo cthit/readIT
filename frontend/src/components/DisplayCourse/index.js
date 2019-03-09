@@ -11,7 +11,7 @@ const DisplayCourse = ({
     <h2>
       {name} ({code})
     </h2>
-    <a href={course_page} target="_blank">
+    <a href={course_page} target="_blank" rel="noopener noreferrer">
       Visit course page
     </a>
     <div>Periods: {periods.join(", ")}</div>
