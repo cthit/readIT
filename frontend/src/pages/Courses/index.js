@@ -9,13 +9,13 @@ const Courses = () => {
     requestData();
   }, []);
 
-  const requestData = () => {
-    fetch("/courses")
-      .then(response => response.json())
-      .then(courses => {
-        setCourses(courses);
-      })
-      .catch(error => console.error(error));
+  const requestData = async() => {
+    try {
+      const response = await fetch("/courses")
+      setCourses(await response.json());
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const filteredSearchList = courses.filter(

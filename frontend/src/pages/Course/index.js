@@ -5,11 +5,13 @@ import DisplayCourse from "../../components/DisplayCourse";
 
 const Course = ({ match }) => {
   const [course, setCourse] = useState({});
-  const fetchCourse = () => {
-    fetch(`/course/${match.params.code}`)
-      .then(response => response.json())
-      .then(course => setCourse(course))
-      .catch(error => console.error(error));
+  const fetchCourse = async() => {
+    try {
+      const response = await fetch(`/course/${match.params.code}`)
+      setCourse(await response.json())
+    } catch (error) {
+      console.error(error);
+    } 
   };
 
   useEffect(() => {
